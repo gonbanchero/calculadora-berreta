@@ -125,13 +125,22 @@ h3 {
 }
 
 @media (max-width: 999px) and (min-width: 100px) {
+    .header {
+        padding: 20px;
+    }
+    
+    .header img {
+        width: 18%;
+    }
+    
     .contenedor {
+        margin: 20px 0px;
         flex-direction: column;
         gap: 30px;
     }
 
     .caja {
-        max-width: 100%;
-        min-width: 50%;
+        max-width: 70%;
+        min-width: 70%;
     }
 }
