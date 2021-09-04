@@ -31,7 +31,7 @@ btnDolar.addEventListener('click', function () {
 
 })
 
-// PORCENTAJE
+// DIFERENCIAS EN PORCENTAJE
 
 let inicial = document.getElementById('valorinicial')
 let final = document.getElementById('valorfinal')
@@ -47,3 +47,28 @@ btnPorcentaje.addEventListener('click', function () {
     resultadoPorcentaje.innerHTML = `${totalPorcentaje}%`
 
 })
+
+// AUMENTO EN PORCENTAJE
+
+let actual = document.getElementById('valoractual')
+let porcentajeAumento = document.getElementById('porcentajeaumento')
+let btnAumento = document.getElementById('btn-aumento')
+let resultadoAumento = document.getElementById('resultado-aumento')
+
+btnAumento.addEventListener('click', function () {
+    let inputActual = parseInt(actual.value);
+    console.log(inputActual)
+    let inputPorcentaje = parseInt(porcentajeAumento.value);
+    console.log(inputPorcentaje)
+    let averiguoPorcentual = (inputPorcentaje/100)
+    console.log(averiguoPorcentual)
+    let aumentoPorcentual = parseInt(averiguoPorcentual * inputActual) + inputActual
+    console.log(aumentoPorcentual)
+
+    // let totalImpuestos = (10/100) * totalPesos + totalPesos
+    resultadoAumento.innerHTML = `$${aumentoPorcentual}`
+
+})
+
+
+// let totalPorcentaje = (diferencia/inputInicial)*100

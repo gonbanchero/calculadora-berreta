@@ -36,14 +36,15 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 3%;
+    row-gap: 30px;
+    column-gap: 30px;
     padding: 2%;
 }
 
 .caja {
     background-color: #8CB650;
-    min-width: 30%;
-    max-width: 30%;
+    min-width: 40%;
+    max-width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
