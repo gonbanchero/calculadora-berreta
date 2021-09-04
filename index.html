@@ -10,26 +10,55 @@
     <title>Probando cositas</title>
 </head>
 
-<body class="grid">
-    <section class="caja">
-        <label for="inversion">Inversión de la campaña:</label>
-        <input type="text" name="" id="inversion" placeholder="ingresa el valor">
-        <label for="ventas">Ventas generadas:</label>
-        <input type="text" name="" id="ventas" placeholder="ingresa el valor">
-        <button id="btn" class="btn">Averiguar Roas</button>
-        <h2>El Roas de tus campañas es:</h2>
-        <h3 id="resultado"></h3>
-    </section>
+<body>
 
-    <section class="dolares caja">
-        <label for="pesos">Valor en pesos argentinos:</label>
-        <input type="text" name="" id="pesos" placeholder="ingresa el valor">
-        <label for="dolar">Valor del dólar oficial:</label>
-        <input type="text" name="" id="dolar" placeholder="ingresa el valor">
-        <button id="btn-dolar" class="btn">Averiguar valor</button>
-        <h2>En dólares tenés que cobrar:</h2>
-        <h3 id="resultado-dolar"></h3>
-    </section>
+    <header class="head">
+
+        <div class="header box">
+            <img src="img/logo-sifon.png" alt="">
+            <h1>Calculadoras útiles</h1>
+        </div>
+
+    </header>
+
+    <article class="contenedor box">
+
+        <section class="caja">
+            <h2 class="titulo">Calcular Roas</h2>
+            <!-- <label for="inversion">Inversión de la campaña:</label> -->
+            <input type="text" name="" id="inversion" placeholder="¿Cuál fue la inversión?">
+            <!-- <label for="ventas">Ventas generadas:</label> -->
+            <input type="text" name="" id="ventas" placeholder="¿Importe de las ventas?">
+            <button id="btn" class="btn">Averiguar Roas</button>
+            <h3>El Roas de tus campañas es:</h3>
+            <h4 id="resultado" class="resultado">...</h4>
+        </section>
+
+        <section class="caja">
+            <h2 class="titulo">Presupuesto en USD</h2>
+            <!-- <label for="pesos">Valor en pesos argentinos:</label> -->
+            <input type="text" name="" id="pesos" placeholder="¿Valor en pesos argentinos?">
+            <!-- <label for="dolar">Valor del dólar oficial:</label> -->
+            <input type="text" name="" id="dolar" placeholder="¿Valor del dólar oficial?">
+            <button id="btn-dolar" class="btn">Averiguar valor</button>
+            <h3>En dólares tenés que cobrar:</h3>
+            <h4 id="resultado-dolar" class="resultado">...</h4>
+        </section>
+
+        <section class="caja">
+            <h2 class="titulo">Diferencia en %</h2>
+            <!-- <label for="pesos">Valor en pesos argentinos:</label> -->
+            <input type="text" name="" id="valorinicial" placeholder="¿Valor inicial?">
+            <!-- <label for="dolar">Valor del dólar oficial:</label> -->
+            <input type="text" name="" id="valorfinal" placeholder="¿Valor final?">
+            <button id="btn-porcentaje" class="btn">Averiguar diferencia</button>
+            <h3>La diferencia en porcentaje es:</h3>
+            <h4 id="resultado-porcentaje" class="resultado">...</h4>
+        </section>
+
+
+    </article>
+
 
 </body>
 

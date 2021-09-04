@@ -1,48 +1,136 @@
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
     font-family: sans-serif;
 }
 
-.grid {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+.box {
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.caja {
-    background-color: aqua;
-    max-width: 20%;
+.head {
+    background-color: #001F2E;
+}
+
+.header {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.header img {
+    width: 10%;
+    margin: 1% 0%;
+}
+.header h1 {
+  font-size: 1.6rem;
+  margin-bottom: 2%;
+  color: white;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3%;
     padding: 2%;
+}
+
+.caja {
+    background-color: #8CB650;
+    min-width: 30%;
+    max-width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 4% 5%;
+}
+
+.titulo {
+    margin-bottom: 10%;
+    font-size: 1.6rem;
+    color: #001F2E;
+
 }
 
 .caja label {
     font-size: 1rem;
     margin-top: 2%;
+    font-weight: 540;
+    text-decoration: underline;
+    color: #001F2E;
 
 }
 
 .caja input {
-    padding: 3%;
+    padding: 5%;
+    width: 100%;
     margin: 3%;
+    border-radius: 5px;
+    border: 0px;
+}
+
+input {
+    text-align: center;
+}
+
+.caja ::placeholder {
+    text-align: center;
 }
 
 .btn {
     padding: 5%;
     color:white;
-    background-color: green;
+    background-color: #001F2E;
+    width: 100%;
     border: 0;
-    border-radius: 30px;
-    margin-top: 5%;
+    border-radius: 5px;
+    margin-top: 2%;
+    font-size: 0.9rem;
 }
 
-h2 {
+h3 {
     margin-top: 10%;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-align: center;
+    color: #001F2E;
+}
+
+.resultado{
+    font-size: 1.1rem;
+    margin-top: 2%;
+    color: #001F2E;
+}
+
+
+
+/* Media Querys */
+
+@media (max-width: 1350px) and (min-width: 1155px) {
+    .titulo {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 1154px) and (min-width: 1000px) {
+    .titulo {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 999px) and (min-width: 100px) {
+    .contenedor {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .caja {
+        max-width: 100%;
+        min-width: 50%;
+    }
 }
