@@ -8,9 +8,10 @@ let resultado = document.getElementById('resultado')
 btn.addEventListener('click', function () {
     let inputInversion = inversion.value;
     let inputVentas = ventas.value;
+    if (inputInversion != '' || inputVentas != ''){
     let resultadoFinal = inputVentas / inputInversion;
     resultado.innerHTML = `${resultadoFinal}x!`
-
+    }
 })
 
 // FIN ROAS
@@ -25,10 +26,11 @@ let resultadoDolar = document.getElementById('resultado-dolar')
 btnDolar.addEventListener('click', function () {
     let inputPesos = pesos.value;
     let inputDolar = dolar.value;
+    if (inputPesos != '' || inputDolar != ''){
     let totalPesos = (inputPesos/inputDolar)
     let totalImpuestos = (10/100) * totalPesos + totalPesos
     resultadoDolar.innerHTML = `${totalImpuestos}usd (comisiones incluidas)`
-
+    }
 })
 
 // DIFERENCIAS EN PORCENTAJE
@@ -41,11 +43,12 @@ let resultadoPorcentaje = document.getElementById('resultado-porcentaje')
 btnPorcentaje.addEventListener('click', function () {
     let inputInicial = valorinicial.value;
     let inputFinal = valorfinal.value;
+    if (inputInicial != '' || inputFinal != ''){
     let diferencia = (inputFinal-inputInicial)
     let totalPorcentaje = (diferencia/inputInicial)*100
     // let totalImpuestos = (10/100) * totalPesos + totalPesos
     resultadoPorcentaje.innerHTML = `${totalPorcentaje}%`
-
+    }
 })
 
 // AUMENTO EN PORCENTAJE
@@ -57,17 +60,14 @@ let resultadoAumento = document.getElementById('resultado-aumento')
 
 btnAumento.addEventListener('click', function () {
     let inputActual = parseInt(actual.value);
-    console.log(inputActual)
     let inputPorcentaje = parseInt(porcentajeAumento.value);
-    console.log(inputPorcentaje)
-    let averiguoPorcentual = (inputPorcentaje/100)
-    console.log(averiguoPorcentual)
-    let aumentoPorcentual = parseInt(averiguoPorcentual * inputActual) + inputActual
-    console.log(aumentoPorcentual)
+    if (inputActual != '' || inputPorcentaje != ''){
+    let averiguoPorcentual = (inputPorcentaje/100);
+    let aumentoPorcentual = parseInt(averiguoPorcentual * inputActual) + inputActual;
 
     // let totalImpuestos = (10/100) * totalPesos + totalPesos
     resultadoAumento.innerHTML = `$${aumentoPorcentual}`
-
+    }
 })
 
 
